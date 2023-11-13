@@ -24,13 +24,13 @@
             "value": false
         },
         "registerCluster": {
-            "value": true
+            "value": false
         },
         "deployResourceBridge": {
-            "value": true
+            "value": false
         },
         "deployAKSHCI": {
-            "value": true
+            "value": false
         }
     }
 }

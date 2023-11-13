@@ -134,7 +134,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -145,7 +145,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -156,7 +156,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -167,7 +167,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -178,7 +178,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -189,7 +189,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -200,7 +200,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
         {
@@ -211,7 +211,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
           caching: 'None'
           writeAcceleratorEnabled: false
           managedDisk: {
-            storageAccountType: 'Premium_LRS'
+            storageAccountType: 'Standard_LRS'
           }
         }
       ]
