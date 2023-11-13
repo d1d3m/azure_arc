@@ -33,10 +33,10 @@ param deployResourceBridge bool = true
 param natDNS string = '8.8.8.8'
 
 @description('Target GitHub account')
-param githubAccount string = 'microsoft'
+param githubAccount string = 'd1d3m'
 
 @description('Target GitHub branch')
-param githubBranch string = 'main'
+param githubBranch string = 'StandardDisks'
 
 @description('Choice to deploy Bastion to connect to the client VM')
 param deployBastion bool = false
