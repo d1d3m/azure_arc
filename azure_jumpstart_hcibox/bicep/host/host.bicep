@@ -21,6 +21,7 @@ param subnetId string
 
 param resourceTags object = {
   Project: 'jumpstart_HCIBox'
+  Branch: 'StandardDisks'
 }
 
 @description('Client id of the service principal')
