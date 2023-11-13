@@ -993,6 +993,8 @@ function Set-AzSMGMT {
 
             $AzSHOST1 = $SDNConfig.AzSHOST1IP.Split("/")[0]
             $AzSHOST2 = $SDNConfig.AzSHOST2IP.Split("/")[0]
+            $AzSHOST3 = $SDNConfig.AzSHOST3IP.Split("/")[0]
+            $AzSHOST4 = $SDNConfig.AzSHOST4IP.Split("/")[0]
 
             Write-Verbose "Setting VMStorage Path for all Hosts"
           
@@ -1002,12 +1004,24 @@ function Set-AzSMGMT {
             Invoke-Command -ComputerName $AzSHOST2  -ArgumentList $VMStoragePathforOtherHosts `
                 -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
                 -Credential $using:localCred -AsJob | Out-Null
+            Invoke-Command -ComputerName $AzSHOST3  -ArgumentList $VMStoragePathforOtherHosts `
+                -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
+                -Credential $using:localCred -AsJob | Out-Null
+            Invoke-Command -ComputerName $AzSHOST4  -ArgumentList $VMStoragePathforOtherHosts `
+                -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
+                -Credential $using:localCred -AsJob | Out-Null
 
             # 2nd pass
             Invoke-Command -ComputerName $AzSHOST1 -ArgumentList $VMStoragePathforOtherHosts `
                 -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
                 -Credential $using:localCred -AsJob | Out-Null
             Invoke-Command -ComputerName $AzSHOST2 -ArgumentList $VMStoragePathforOtherHosts `
+                -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
+                -Credential $using:localCred -AsJob | Out-Null
+            Invoke-Command -ComputerName $AzSHOST3 -ArgumentList $VMStoragePathforOtherHosts `
+                -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
+                -Credential $using:localCred -AsJob | Out-Null
+            Invoke-Command -ComputerName $AzSHOST4 -ArgumentList $VMStoragePathforOtherHosts `
                 -ScriptBlock { Set-VMHost -VirtualHardDiskPath $args[0] -VirtualMachinePath $args[0] } `
                 -Credential $using:localCred -AsJob | Out-Null
 
@@ -1025,6 +1039,8 @@ function Set-AzSMGMT {
             Write-Verbose "Adding HCIBox Hosts to the Domain"
             AddAzSHOSTToDomain -IP $AzSHOST1 -localCred $using:localCred -domainCred $using:domainCred -AzSHOSTName AzSHOST1 -SDNConfig $SDNConfig
             AddAzSHOSTToDomain -IP $AzSHOST2 -localCred $using:localCred -domainCred $using:domainCred -AzSHOSTName AzSHOST2 -SDNConfig $SDNConfig
+            AddAzSHOSTToDomain -IP $AzSHOST3 -localCred $using:localCred -domainCred $using:domainCred -AzSHOSTName AzSHOST3 -SDNConfig $SDNConfig
+            AddAzSHOSTToDomain -IP $AzSHOST4 -localCred $using:localCred -domainCred $using:domainCred -AzSHOSTName AzSHOST4 -SDNConfig $SDNConfig
         }
         catch {
             throw $_
@@ -2444,7 +2460,7 @@ function New-SDNEnvironment {
                 $NCConfig.VHDPath = "C:\VHDS"
                 $NCConfig.ManagementSubnet = $SDNConfig.MGMTSubnet
                 $NCConfig.ProductKey = $SDNConfig.COREProductKey
-                $NCConfig.HyperVHosts = @("AzSHOST1.$fqdn", "AzSHOST2.$fqdn")
+                $NCConfig.HyperVHosts = @("AzSHOST1.$fqdn", "AzSHOST2.$fqdn", "AzSHOST3.$fqdn", "AzSHOST4.$fqdn")
                 $NCConfig.ManagementDNS = @(
                     ($SDNConfig.BGPRouterIP_MGMT.Split("/")[0].TrimEnd("1")) + "254"
                 ) 

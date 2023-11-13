@@ -214,6 +214,72 @@ resource vm 'Microsoft.Compute/virtualMachines@2022-03-01' = {
             storageAccountType: 'Standard_LRS'
           }
         }
+        {
+          name: 'ASHCIHost001_DataDisk_8'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 8
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          name: 'ASHCIHost001_DataDisk_9'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 9
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          name: 'ASHCIHost001_DataDisk_10'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 10
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          name: 'ASHCIHost001_DataDisk_11'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 11
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          name: 'ASHCIHost001_DataDisk_12'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 12
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          name: 'ASHCIHost001_DataDisk_13'
+          diskSizeGB: 256
+          createOption: 'Empty'
+          lun: 13
+          caching: 'None'
+          writeAcceleratorEnabled: false
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
       ]
     }
     networkProfile: {

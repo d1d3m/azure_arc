@@ -5,7 +5,7 @@
     # Version 1.0.0
 
     # HCI host names
-    HostList                             = "AZSHOST1", "AZSHOST2"  # DO NOT CHANGE these as they remain hardcoded in places
+    HostList                             = "AZSHOST1", "AZSHOST2", "AZSHOST3", "AZSHOST4"  # DO NOT CHANGE these as they remain hardcoded in places
 
     # VHDX Paths 
     guiVHDXPath                          = "C:\HCIBox\VHD\gui.vhdx"              # This value controls the location of the GUI VHDX.              
@@ -16,7 +16,7 @@
 
     # VM Configuration
     HostVMPath                           = "V:\VMs"                              # This value controls the path where the Nested VMs will be stored on all hosts.
-    NestedVMMemoryinGB                   = 105GB                                 # This value controls the amount of RAM for each Nested Hyper-V Host (AzSHOST1-2).
+    NestedVMMemoryinGB                   = 48GB                                  # This value controls the amount of RAM for each Nested Hyper-V Host (AzSHOST1-2).
     AzSMGMTMemoryinGB                    = 28GB                                  # This value controls the amount of RAM for the AzSMGMT Nested VM which contains only the Console, Router, Admincenter, and DC VMs.
     InternalSwitch                       = "InternalSwitch"                      # Name of internal switch that the HCIBox VMs will use in Single Host mode. This only applies when using a single host.
 
@@ -61,6 +61,7 @@
     AzSHOST1IP                           = "192.168.1.12/24"
     AzSHOST2IP                           = "192.168.1.13/24"
     AzSHOST3IP                           = "192.168.1.14/24"
+    AzSHOST4IP                           = "192.168.1.16/24"
 
     # Physical Host Internal IP
     PhysicalHostInternalIP               = "192.168.1.20"                          # IP Address assigned to Internal Switch vNIC in a Single Host Configuration
