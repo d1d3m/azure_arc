@@ -2690,7 +2690,7 @@ function New-SDNS2DCluster {
 
             # Create S2D Cluster
             $SDNConfig = $args[0]
-            $AzSHOSTs = @("AzSHOST1", "AzSHOST2")
+            $AzSHOSTs = @("AzSHOST1", "AzSHOST2", "AzSHOST3", "AzSHOST4")
 
             Write-Verbose "Creating Cluster: hciboxcluster"
             $VerbosePreference = "SilentlyContinue"
@@ -2865,7 +2865,7 @@ $NCAdminCred = new-object -typename System.Management.Automation.PSCredential `
     (ConvertTo-SecureString $SDNConfig.SDNAdminPassword  -AsPlainText -Force)
 
 # Define HCIBox host Names. Please do not change names as these names are hardcoded in the setup.
-$AzSHOSTs = @("AzSMGMT", "AzSHOST1", "AzSHOST2")
+$AzSHOSTs = @("AzSMGMT", "AzSHOST1", "AzSHOST2", "AzSHOST3", "AzSHOST4")
 
 # Delete configuration if specified
 if ($Delete) {
