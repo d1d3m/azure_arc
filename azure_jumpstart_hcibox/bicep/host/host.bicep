@@ -65,7 +65,7 @@ var encodedPassword = base64(windowsAdminPassword)
 var bastionName = 'HCIBox-Bastion'
 var publicIpAddressName = deployBastion == false ? '${vmName}-PIP' : '${bastionName}-PIP'
 var networkInterfaceName = '${vmName}-NIC'
-var osDiskType = 'Premium_LRS'
+var osDiskType = 'Standard_LRS'
 var PublicIPNoBastion = {
   id: publicIpAddress.id
 }
